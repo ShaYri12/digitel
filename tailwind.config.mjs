@@ -8,8 +8,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        purple: "#4A199A",
+      },
+      fontFamily: {
+        future: ["Futura Maxi CG Bold", "sans-serif"],
       },
     },
   },

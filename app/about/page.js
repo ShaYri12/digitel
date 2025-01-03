@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-export default function Home() {
+const About = () => {
   const pathname = usePathname();
 
   useEffect(() => {
@@ -17,12 +17,11 @@ export default function Home() {
       body.classList.remove("bg-grid-white");
     }
   }, [pathname]);
-
   return (
-    <div className="py-[100px] min-h-screen">
-      <div>Hero section</div>
-      <div>Brand Logos</div>
-      <div>IIElevenLabs</div>
-    </div>
+    <section className="min-h-screen">
+      <div>About</div>
+    </section>
   );
-}
+};
+
+export default About;
