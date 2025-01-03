@@ -21,41 +21,43 @@ export default function Footer() {
   return (
     <footer className="bg-[#141414] text-white">
       {/* Newsletter Section */}
-      <div className="max-w-[1116px] mx-auto rounded-[29px] bg-purple py-16 mb-[-100px] relative z-[2]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-5xl font-light mb-4">
-            Stay Connected With Our News
-          </h2>
-          <p className="text-lg mb-8 max-w-3xl mx-auto">
-            Stay up to date with the latest news and innovations in phone call
-            automation. Subscribe now to receive exclusive tips, product
-            updates, and special offers directly to your inbox.
-          </p>
-          <form
-            onSubmit={handleSubscribe}
-            className="flex gap-4 max-w-2xl mx-auto"
-          >
-            <input
-              type="email"
-              placeholder="Enter Email"
-              className="flex-1 bg-purple-800/50 rounded-full px-6 py-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <button
-              type="submit"
-              className="bg-black hover:bg-gray-900 text-white px-8 py-3 rounded-full transition-colors"
+      <div className="md:px-[48px] px-4 mb-[-100px] relative z-[2]">
+        <div className="max-w-[1116px] mx-auto rounded-[29px] bg-purple py-16">
+          <div className="max-w-[921px] mx-auto md:px-6 px-4 text-center">
+            <h2 className="text-5xl font-light mb-4">
+              Stay Connected With Our News
+            </h2>
+            <p className="text-lg mb-8 max-w-3xl mx-auto">
+              Stay up to date with the latest news and innovations in phone call
+              automation. Subscribe now to receive exclusive tips, product
+              updates, and special offers directly to your inbox.
+            </p>
+            <form
+              onSubmit={handleSubscribe}
+              className="flex flex-wrap gap-4 max-w-2xl mx-auto"
             >
-              Subscribe
-            </button>
-          </form>
+              <input
+                type="email"
+                placeholder="Enter Email"
+                className="flex-1 bg-purple-800/50 rounded-full px-6 py-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <button
+                type="submit"
+                className="bg-black hover:bg-gray-900 text-white px-8 py-3 rounded-full transition-colors"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
         </div>
       </div>
 
       {/* Main Footer Content */}
-      <div className="w-full md:px-6 px-4 md:pb-[25px] pb-4">
-        <div className="bg-[#FFFFFF0A] rounded-[29px]">
-          <div className="max-w-[1280px] mx-auto w-full pt-[150px]">
+      <div className="w-full md:pb-[25px] md:px-6">
+        <div className="bg-[#FFFFFF0A] md:px-4 rounded-[29px]">
+          <div className="max-w-[1280px] mx-auto w-full pt-[150px] md:px-0 px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
               {/* Company Info */}
               <div className="lg:col-span-2">
@@ -221,43 +223,43 @@ export default function Footer() {
             </div>
           </div>
           {/* Footer Bottom */}
-          <div className="mt-[50px] pt-8 border-t-[2px] border-[#3030305C]">
-            <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="mt-[50px]">
+            <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6 py-4 border-t-[2px] border-[#3030305C] md:px-6 px-4">
               {/* Social Links */}
-              <div className="flex gap-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <a
                   href="#"
-                  className="hover:text-purple-500 p-2 rounded-full hover:bg-gray-800"
+                  className="rounded-full hover:bg-purple w-[45px] h-[45px] flex items-center justify-center border border-white"
                 >
                   <FaFacebookF className="w-6 h-6" />
                 </a>
                 <a
                   href="#"
-                  className="hover:text-purple-500 p-2 rounded-full hover:bg-gray-800"
+                  className="rounded-full hover:bg-purple w-[45px] h-[45px] flex items-center justify-center border border-white"
                 >
                   <FaInstagram className="w-6 h-6" />
                 </a>
                 <a
                   href="#"
-                  className="hover:text-purple-500 p-2 rounded-full hover:bg-gray-800"
+                  className="rounded-full hover:bg-purple w-[45px] h-[45px] flex items-center justify-center border border-white"
                 >
                   <FaTiktok className="w-6 h-6" />
                 </a>
                 <a
                   href="#"
-                  className="hover:text-purple-500 p-2 rounded-full hover:bg-gray-800"
+                  className="rounded-full hover:bg-purple w-[45px] h-[45px] flex items-center justify-center border border-white"
                 >
                   <FaLinkedinIn className="w-6 h-6" />
                 </a>
                 <a
                   href="#"
-                  className="hover:text-purple-500 p-2 rounded-full hover:bg-gray-800"
+                  className="rounded-full hover:bg-purple w-[45px] h-[45px] flex items-center justify-center border border-white"
                 >
                   <FaXTwitter className="w-6 h-6" />
                 </a>
                 <a
                   href="#"
-                  className="hover:text-purple-500 p-2 rounded-full hover:bg-gray-800"
+                  className="rounded-full hover:bg-purple w-[45px] h-[45px] flex items-center justify-center border border-white"
                 >
                   <FaYoutube className="w-6 h-6" />
                 </a>
@@ -266,26 +268,26 @@ export default function Footer() {
               {/* Certifications */}
               <div className="flex items-center gap-6">
                 <Image
-                  src="/placeholder.svg?height=40&width=40"
+                  src="/assets/iso.png"
                   alt="ISO Certification"
-                  width={40}
-                  height={40}
+                  width={68}
+                  height={56}
                 />
                 <Image
-                  src="/placeholder.svg?height=40&width=40"
+                  src="/assets/gdpr.png"
                   alt="GDPR Compliance"
-                  width={40}
-                  height={40}
+                  width={72}
+                  height={66}
                 />
                 <Image
-                  src="/placeholder.svg?height=40&width=40"
+                  src="/assets/aicpa.png"
                   alt="AICPA SOC"
-                  width={40}
-                  height={40}
+                  width={120}
+                  height={90}
                 />
               </div>
             </div>
-            <div className="border-t-[2px] border-[#3030305C] py-[24px]">
+            <div className="border-t-[2px] border-[#3030305C] py-[24px] md:px-6 px-4">
               <div className="max-w-[1280px] mx-auto w-full flex items-center justify-between flex-wrap gap-4">
                 {/* Copyright */}
                 <p className="text-white md:text-[18px]">
