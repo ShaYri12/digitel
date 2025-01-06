@@ -1,6 +1,6 @@
 "use client";
-
 import { useState } from "react";
+import { GoPlus } from "react-icons/go";
 
 export default function OurPledge() {
   const [openItem, setOpenItem] = useState(null);
@@ -48,46 +48,60 @@ export default function OurPledge() {
   ];
 
   return (
-    <div className="bg-[#1a1a1a] text-white py-16">
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="rounded-3xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-800/50 p-8 md:p-12">
-          <h2 className="text-4xl font-light mb-4">Our Pledge</h2>
+    <div
+      className="mb-[36px] md:rounded-[31px] rounded-[25px] border border-[#FFFFFF33] lg:px-[70px] md:px-[40px] px-4 md:py-[50px] py-[30px]"
+      style={{
+        background:
+          "linear-gradient(166.27deg, rgba(38, 38, 38, 0.2) 69.2%, #363636 102.23%)",
+      }}
+    >
+      <h2 className="md:text-[32px] text-[24px] font-[400] mb-[21px]">
+        Our Pledge
+      </h2>
 
-          <p className="text-gray-400 mb-12">
-            At Digitel, we are dedicated to harnessing the transformative power
-            of AI call technology responsibly and ethically. Our pledge outlines
-            the guiding principles that ensure fairness, transparency, and trust
-            in every aspect of our operation
-          </p>
+      <p className="md:text-[18px] font-[300] mb-[37px]">
+        At Digitel, we are dedicated to harnessing the transformative power of
+        AI call technology responsibly and ethically. Our pledge outlines the
+        guiding principles that ensure fairness, transparency, and trust in
+        every aspect of our operation
+      </p>
 
-          <div className="space-y-4">
-            {pledgeItems.map((item, index) => (
-              <div
-                key={index}
-                className="border-b border-gray-800 last:border-b-0"
+      <h2 className="md:text-[24] text-[18px] font-[400] mb-[21px]">
+        Promoting Transparency in AI Interactions
+      </h2>
+
+      <p className="md:text-[18px] font-[300] mb-[23px]">
+        We believe that trust starts with transparency. Customers will always be
+        informed when they are interacting with AI-powered systems. We will
+        clearly explain how our AI works, the data it uses, and provide options
+        for escalating interactions to human representatives when needed. By
+        prioritizing openness, we aim to empower customers to make informed
+        decisions.
+      </p>
+
+      <div className="space-y-4">
+        {pledgeItems.map((item, index) => (
+          <div key={index} className="border-b border-gray-800 last:border-b-0">
+            <button
+              onClick={() => toggleItem(index)}
+              className="flex items-center justify-between w-full text-left text-xl font-light py-4 focus:outline-none group"
+            >
+              <span className="group-hover:text-purple-400 transition-colors">
+                {item.title}
+              </span>
+              <span
+                className={`text-purple-400 transition-transform duration-200 ${
+                  openItem === index ? "rotate-45" : ""
+                }`}
               >
-                <button
-                  onClick={() => toggleItem(index)}
-                  className="flex items-center justify-between w-full text-left text-xl font-light py-4 focus:outline-none group"
-                >
-                  <span className="group-hover:text-purple-400 transition-colors">
-                    {item.title}
-                  </span>
-                  <span
-                    className={`text-purple-400 transition-transform duration-200 ${
-                      openItem === index ? "rotate-45" : ""
-                    }`}
-                  >
-                    +
-                  </span>
-                </button>
-                {openItem === index && (
-                  <div className="text-gray-400 pb-4">{item.content}</div>
-                )}
-              </div>
-            ))}
+                <GoPlus size={24} />
+              </span>
+            </button>
+            {openItem === index && (
+              <div className="text-gray-400 pb-4">{item.content}</div>
+            )}
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );

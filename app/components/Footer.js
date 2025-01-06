@@ -22,30 +22,30 @@ export default function Footer() {
     <footer className="bg-[#141414] text-white">
       {/* Newsletter Section */}
       <div className="md:px-[48px] px-4 mb-[-100px] relative z-[2]">
-        <div className="max-w-[1116px] mx-auto rounded-[29px] bg-purple py-16">
-          <div className="max-w-[921px] mx-auto md:px-6 px-4 text-center">
-            <h2 className="text-5xl font-light mb-4">
+        <div className="max-w-[1116px] mx-auto rounded-[29px] bg-purple md:py-[75px] sm:py-[55px] py-[40px] md:px-6 px-4">
+          <div className="max-w-[921px] mx-auto text-center">
+            <h2 className="lg:text-[62px] md:text-[45px] text-[35px] font-[400] lg:leading-[70px]">
               Stay Connected With Our News
             </h2>
-            <p className="text-lg mb-8 max-w-3xl mx-auto">
+            <p className="md:text-[18px] font-[200] md:mb-[36px] mb-[20px] max-w-[920px] mx-auto">
               Stay up to date with the latest news and innovations in phone call
               automation. Subscribe now to receive exclusive tips, product
               updates, and special offers directly to your inbox.
             </p>
             <form
               onSubmit={handleSubscribe}
-              className="flex flex-wrap gap-4 max-w-2xl mx-auto"
+              className="flex sm:flex-row flex-col flex-wrap max-w-[620px] bg-[#FFFFFF0A] mx-auto sm:rounded-full rounded-[20px] p-[4px] group focus-within:border border border-transparent focus-within:border-white/50"
             >
               <input
                 type="email"
                 placeholder="Enter Email"
-                className="flex-1 bg-purple-800/50 rounded-full px-6 py-3 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                className="flex-1 bg-transparent sm:rounded-full rounded-[20px] placeholder:text-[#FFFFFF5C] font-[400] sm:px-5 px-3 py-3 focus:outline-none focus:ring-0"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <button
                 type="submit"
-                className="bg-black hover:bg-gray-900 text-white px-8 py-3 rounded-full transition-colors"
+                className="bg-[#141414] hover:bg-gray-900 text-white px-[25px] py-[14.5px] sm:flex-grow-0 flex-grow sm:rounded-full rounded-[20px] transition-colors"
               >
                 Subscribe
               </button>
@@ -58,13 +58,16 @@ export default function Footer() {
       <div className="w-full md:pb-[25px] md:px-6">
         <div className="bg-[#FFFFFF0A] md:px-4 rounded-[29px]">
           <div className="max-w-[1280px] mx-auto w-full pt-[150px] md:px-0 px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-[30px]">
               {/* Company Info */}
               <div className="lg:col-span-2">
-                <Link href="/" className="text-3xl font-bold mb-6 block">
+                <Link
+                  href="/"
+                  className="lg:text-[58px] text-3xl font-bold lg:leading-[62px] mb-[18px] block"
+                >
                   Digitel
                 </Link>
-                <p className="text-gray-400 mb-6">
+                <p className="text-[15px] font-[300]">
                   Create AI-Powered Phone Agents Without a Single Line of
                   Code!Say hello to Digitel.ai—the ultimate platform to automate
                   incoming and outgoing calls effortlessly. With support for 25+
@@ -76,12 +79,14 @@ export default function Footer() {
 
               {/* Links Sections */}
               <div>
-                <h3 className="text-xl font-semibold mb-4">Digitel</h3>
-                <ul className="space-y-3">
+                <h3 className="md:text-[22px] text-[18px] font-[500] mb-5">
+                  Digitel
+                </h3>
+                <ul className="space-y-4">
                   <li>
                     <Link
                       href="/about"
-                      className="text-gray-400 hover:text-white"
+                      className="text-[16px] hover:text-purple font-[300]"
                     >
                       About Us
                     </Link>
@@ -89,7 +94,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/contact"
-                      className="text-gray-400 hover:text-white"
+                      className="text-[16px] hover:text-purple font-[300]"
                     >
                       Contact
                     </Link>
@@ -97,7 +102,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/privacy"
-                      className="text-gray-400 hover:text-white"
+                      className="text-[16px] hover:text-purple font-[300]"
                     >
                       Privacy policy
                     </Link>
@@ -105,7 +110,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/terms"
-                      className="text-gray-400 hover:text-white"
+                      className="text-[16px] hover:text-purple font-[300]"
                     >
                       Terms and conditions
                     </Link>
@@ -113,7 +118,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/cookies"
-                      className="text-gray-400 hover:text-white"
+                      className="text-[16px] hover:text-purple font-[300]"
                     >
                       Cookies Policy
                     </Link>
@@ -121,7 +126,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/ethics"
-                      className="text-gray-400 hover:text-white"
+                      className="text-[16px] hover:text-purple font-[300]"
                     >
                       Ethics and Security
                     </Link>
@@ -130,12 +135,14 @@ export default function Footer() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-4">Platform</h3>
-                <ul className="space-y-3">
+                <h3 className="md:text-[22px] text-[18px] font-[500] mb-5">
+                  Platform
+                </h3>
+                <ul className="space-y-4">
                   <li>
                     <Link
-                      href="/try"
-                      className="text-gray-400 hover:text-white"
+                      href="/try-for-free"
+                      className="text-[16px] hover:text-purple font-[300]"
                     >
                       Try for free
                     </Link>
@@ -143,15 +150,15 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/pricing"
-                      className="text-gray-400 hover:text-white"
+                      className="text-[16px] hover:text-purple font-[300]"
                     >
                       Pricing
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/signup"
-                      className="text-gray-400 hover:text-white"
+                      href="/Sign-up-now"
+                      className="text-[16px] hover:text-purple font-[300]"
                     >
                       Sign up now
                     </Link>
@@ -159,15 +166,15 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/login"
-                      className="text-gray-400 hover:text-white"
+                      className="text-[16px] hover:text-purple font-[300]"
                     >
                       Login
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/newsletter"
-                      className="text-gray-400 hover:text-white"
+                      href="/subscribe"
+                      className="text-[16px] hover:text-purple font-[300]"
                     >
                       Subscribe to the newsletter
                     </Link>
@@ -176,12 +183,62 @@ export default function Footer() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold mb-4">Industries</h3>
+                <h3 className="md:text-[22px] text-[18px] font-[500] mb-5">
+                  Digitel Solution
+                </h3>
+                <ul className="space-y-4">
+                  <li>
+                    <Link
+                      href="/see-digitel"
+                      className="text-[16px] hover:text-purple font-[300]"
+                    >
+                      See Digitel in action
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/use-cases"
+                      className="text-[16px] hover:text-purple font-[300]"
+                    >
+                      Use cases
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/no-code-platform"
+                      className="text-[16px] hover:text-purple font-[300]"
+                    >
+                      No-code platform
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/available-languages"
+                      className="text-[16px] hover:text-purple font-[300]"
+                    >
+                      Available languages
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/faq"
+                      className="text-[16px] hover:text-purple font-[300]"
+                    >
+                      Frequently asked questions
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="md:text-[22px] text-[18px] font-[500] mb-5">
+                  Industries
+                </h3>
                 <ul className="space-y-3">
                   <li>
                     <Link
                       href="/services"
-                      className="text-gray-400 hover:text-white"
+                      className="text-[16px] hover:text-purple font-[300]"
                     >
                       Services
                     </Link>
@@ -189,7 +246,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/call-center"
-                      className="text-gray-400 hover:text-white"
+                      className="text-[16px] hover:text-purple font-[300]"
                     >
                       Call center
                     </Link>
@@ -197,7 +254,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/real-estate"
-                      className="text-gray-400 hover:text-white"
+                      className="text-[16px] hover:text-purple font-[300]"
                     >
                       Real estate
                     </Link>
@@ -205,7 +262,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/online-stores"
-                      className="text-gray-400 hover:text-white"
+                      className="text-[16px] hover:text-purple font-[300]"
                     >
                       Online stores
                     </Link>
@@ -213,7 +270,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/medical"
-                      className="text-gray-400 hover:text-white"
+                      className="text-[16px] hover:text-purple font-[300]"
                     >
                       Medical
                     </Link>
@@ -282,13 +339,13 @@ export default function Footer() {
                 <Image
                   src="/assets/aicpa.png"
                   alt="AICPA SOC"
-                  width={120}
-                  height={90}
+                  width={72}
+                  height={66}
                 />
               </div>
             </div>
             <div className="border-t-[2px] border-[#3030305C] py-[24px] md:px-6 px-4">
-              <div className="max-w-[1280px] mx-auto w-full flex items-center justify-between flex-wrap gap-4">
+              <div className="max-w-[1280px] mx-auto w-full flex items-center sm:justify-between justify-center sm:flex-row flex-col gap-4">
                 {/* Copyright */}
                 <p className="text-white md:text-[18px]">
                   © Copyright 2024. All Rights Reserved
