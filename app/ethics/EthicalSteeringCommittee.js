@@ -31,12 +31,9 @@ export default function EthicalSteeringCommittee() {
         Ethical Steering Committee
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         {committeeMembers.map((member, index) => (
-          <div
-            key={index}
-            className="flex items-center md:text-left text-center gap-3"
-          >
+          <div key={index} className="flex items-center gap-3">
             <div className="w-[177px] min-w-[177px] h-[240px] overflow-hidden rounded-[20px]">
               {/* Using a div with background-image for better image control */}
               <img
