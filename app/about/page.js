@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import HeroSection from "./HeroSection";
 
 const About = () => {
   const pathname = usePathname();
@@ -18,9 +19,11 @@ const About = () => {
     }
   }, [pathname]);
   return (
-    <section className="min-h-screen">
-      <div>About</div>
-    </section>
+    <main className="relative min-h-screen md:py-12 py-8 md:px-6 px-4">
+      <div className="max-w-[1280px] mx-auto text-white">
+        <HeroSection />
+      </div>
+    </main>
   );
 };
 
