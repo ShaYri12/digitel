@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { PulseLoader } from "react-spinners"; // Import the new spinner
+import { SyncLoader } from "react-spinners"; // Import the new spinner
 
 const SplashScreen = () => {
   const [isVisible, setIsVisible] = useState(true); // Local state to manage visibility
@@ -9,7 +9,7 @@ const SplashScreen = () => {
     // Set a timeout to hide the splash screen after 2 seconds
     const timer = setTimeout(() => {
       setIsVisible(false); // Hide splash screen locally after 2 seconds
-    }, 2000); // 2 seconds
+    }, 1500); // 2 seconds
 
     // Cleanup the timer if the component is unmounted before the timeout is reached
     return () => clearTimeout(timer);
@@ -23,7 +23,7 @@ const SplashScreen = () => {
           Digitel
         </h1>
         {/* Pulse Spinner */}
-        <PulseLoader color="#ffffff" size={15} />
+        <SyncLoader color="#ffffff" size={15} />
       </div>
     )
   );
