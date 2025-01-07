@@ -48,7 +48,7 @@ export default function OurPledge() {
   ];
 
   return (
-    <div
+    <section
       className="mb-[36px] md:rounded-[31px] rounded-[25px] border border-[#FFFFFF33] lg:px-[70px] md:px-[40px] px-4 md:py-[50px] py-[30px]"
       style={{
         background:
@@ -103,6 +103,6 @@ export default function OurPledge() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

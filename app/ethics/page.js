@@ -2,10 +2,11 @@ import React from "react";
 import OurPledge from "./OurPledge";
 import CardWithText from "./CardWithText";
 import EthicalSteeringCommittee from "./EthicalSteeringCommittee";
+import Image from "next/image";
 
 const Ethics = () => {
   return (
-    <main className="min-h-screen md:py-12 py-8 md:px-6 px-4">
+    <main className="relative min-h-screen md:pt-12 pt-8 md:px-6 px-4 pb-[200px]">
       <div className="max-w-[1280px] mx-auto text-white">
         <h1 className="mb-[30px] xl:text-[92px] lg:text-[70px] md:text-[60px] text-[50px] font-[400]">
           Ethics
@@ -26,7 +27,18 @@ const Ethics = () => {
         </div>
         <EthicalSteeringCommittee />
         <OurPledge />
+        <CardWithText
+          title="Our Commitment to Action"
+          para="This pledge underscores our dedication to leading the real-time interactive avatar industry with integrity. It represents our vision of creating a future where avatars enhance communication, empower users, and inspire trust. By inviting others to join us in this mission, we aim to ensure that innovation and ethics work in harmony to benefit society as a whole."
+        />
       </div>
+      <Image
+        src="/assets/dots.png"
+        alt="dots"
+        width={330}
+        height={208}
+        className="absolute right-0 md:bottom-[-150px] bottom-[-120px] z-1 md:w-[330px] w-[290px]"
+      />
     </main>
   );
 };

@@ -20,7 +20,7 @@ export default function EthicalSteeringCommittee() {
   ];
 
   return (
-    <div
+    <section
       className="mb-[34px] md:rounded-[31px] rounded-[25px] border border-[#FFFFFF33] lg:px-[70px] md:px-[40px] px-4 md:py-[50px] py-[30px]"
       style={{
         background:
@@ -43,12 +43,16 @@ export default function EthicalSteeringCommittee() {
               />
             </div>
             <div className="flex flex-col">
-              <h3 className="text-xl font-light mb-1">{member.name}</h3>
-              <p className="text-gray-400">{member.role}</p>
+              <h3 className="md:text-[24px] text-[20px] font-[400] mb-[6px]">
+                {member.name}
+              </h3>
+              <p className="md:text-[18px] text-[16px] font-[400]">
+                {member.role}
+              </p>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
