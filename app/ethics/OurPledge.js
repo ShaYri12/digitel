@@ -79,18 +79,18 @@ export default function OurPledge() {
         decisions.
       </p>
 
-      <div className="space-y-4">
+      <div className="space-y-0">
         {pledgeItems.map((item, index) => (
-          <div key={index} className="border-b border-gray-800 last:border-b-0">
+          <div key={index} className="border-t-[2px] border-[#3030305C]">
             <button
               onClick={() => toggleItem(index)}
-              className="flex items-center justify-between w-full text-left text-xl font-light py-4 focus:outline-none group"
+              className="flex items-center justify-between w-full text-left md:text-[24px] text-[19px] font-light py-4 focus:outline-none group"
             >
-              <span className="group-hover:text-purple-400 transition-colors">
+              <span className="group-hover:text-gray-200 transition-colors">
                 {item.title}
               </span>
               <span
-                className={`text-purple-400 transition-transform duration-200 ${
+                className={`text-white transition-transform duration-200 ${
                   openItem === index ? "rotate-45" : ""
                 }`}
               >
@@ -98,7 +98,9 @@ export default function OurPledge() {
               </span>
             </button>
             {openItem === index && (
-              <div className="text-gray-400 pb-4">{item.content}</div>
+              <div className="text-white md:text-[18px] font-[300] pb-4">
+                {item.content}
+              </div>
             )}
           </div>
         ))}
