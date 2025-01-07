@@ -69,31 +69,31 @@ export default function Navbar() {
           >
             <Link
               href="/"
-              className="text-white md:text-[18px] font-[300] hover:text-purple transition-colors"
+              className="text-white md:text-[18px] font-[300] hover:border-white border-b border-transparent transition-colors"
             >
               Home
             </Link>
             <Link
               href="/company"
-              className="text-white md:text-[18px] font-[300] hover:text-purple transition-colors"
+              className="text-white md:text-[18px] font-[300] hover:border-white border-b border-transparent transition-colors"
             >
               Company
             </Link>
             <Link
               href="/technology"
-              className="text-white md:text-[18px] font-[300] hover:text-purple transition-colors"
+              className="text-white md:text-[18px] font-[300] hover:border-white border-b border-transparent transition-colors"
             >
               Technology
             </Link>
             <Link
               href="/solutions"
-              className="text-white md:text-[18px] font-[300] hover:text-purple transition-colors"
+              className="text-white md:text-[18px] font-[300] hover:border-white border-b border-transparent transition-colors"
             >
               Solutions
             </Link>
             <Link
               href="/pricing"
-              className="text-white md:text-[18px] font-[300] hover:text-purple transition-colors"
+              className="text-white md:text-[18px] font-[300] hover:border-white border-b border-transparent transition-colors"
             >
               Pricing
             </Link>
@@ -138,35 +138,35 @@ export default function Navbar() {
 
             <Link
               href="/"
-              className="text-white hover:text-gray-300"
+              className="text-white hover:border-white border-b border-transparent w-fit"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
               href="/company"
-              className="text-white hover:text-gray-300"
+              className="text-white hover:border-white border-b border-transparent w-fit"
               onClick={() => setIsOpen(false)}
             >
               Company
             </Link>
             <Link
               href="/technology"
-              className="text-white hover:text-gray-300"
+              className="text-white hover:border-white border-b border-transparent w-fit"
               onClick={() => setIsOpen(false)}
             >
               Technology
             </Link>
             <Link
               href="/solutions"
-              className="text-white hover:text-gray-300"
+              className="text-white hover:border-white border-b border-transparent w-fit"
               onClick={() => setIsOpen(false)}
             >
               Solutions
             </Link>
             <Link
               href="/pricing"
-              className="text-white hover:text-gray-300"
+              className="text-white hover:border-white border-b border-transparent w-fit"
               onClick={() => setIsOpen(false)}
             >
               Pricing
