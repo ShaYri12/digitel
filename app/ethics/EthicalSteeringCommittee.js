@@ -46,7 +46,7 @@ export default function EthicalSteeringCommittee() {
               <h3 className="md:text-[24px] text-[20px] font-[400] mb-[6px]">
                 {member.name}
               </h3>
-              <p className="md:text-[18px] text-[16px] font-[400]">
+              <p className="md:text-[18px] text-[16px] font-[300]">
                 {member.role}
               </p>
             </div>

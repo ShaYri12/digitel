@@ -8,25 +8,33 @@ import {
 export default function Values() {
   const values = [
     {
-      icon: <PiLightbulbFill className="w-[42px] h-[42px]" />,
+      icon: (
+        <PiLightbulbFill className="md:w-[42px] w-[35px] md:h-[42px] h-[35px]" />
+      ),
       title: "Customer-Driven Innovation",
       description:
         "We prioritize your success by investing in cutting-edge solutions and deep user research. By aligning our goals with yours, we create AI-powered experiences that elevate your customer interactions, building lasting relationships grounded in trust and collaboration.",
     },
     {
-      icon: <PiKeyholeFill className="w-[42px] h-[42px]" />,
+      icon: (
+        <PiKeyholeFill className="md:w-[42px] w-[35px] md:h-[42px] h-[35px]" />
+      ),
       title: "Privacy-Centric Commitment",
       description:
         "Your data, your rules. We ensure your information is handled with the highest levels of security and transparency, giving you complete control and peace of mind while safeguarding your customers' trust.",
     },
     {
-      icon: <PiTrendUpBold className="w-[42px] h-[42px]" />,
+      icon: (
+        <PiTrendUpBold className="md:w-[42px] w-[35px] md:h-[42px] h-[35px]" />
+      ),
       title: "Culture of Empowerment and Growth",
       description:
         "Diversity, respect, and learning are at the heart of what we do. We embrace feedback, mentor one another, and strive for continuous improvement, ensuring our team—and yours—achieves new heights of success together.",
     },
     {
-      icon: <PiTrophyFill className="w-[42px] h-[42px]" />,
+      icon: (
+        <PiTrophyFill className="md:w-[42px] w-[35px] md:h-[42px] h-[35px]" />
+      ),
       title: "Relentless Pursuit of Excellence",
       description:
         "Your data, your rules. We ensure your information is handled with the highest levels of security and transparency, giving you complete control and peace of mind while safeguarding your customers' trust.",
@@ -50,7 +58,7 @@ export default function Values() {
                   "linear-gradient(166.27deg, rgba(38, 38, 38, 0.2) 69.2%, #363636 102.23%)",
               }}
             >
-              <div className="bg-purple rounded-full w-[90px] min-w-[90px] h-[90px] flex items-center justify-center mb-[20px]">
+              <div className="bg-purple rounded-full md:w-[90px] w-[65px] md:min-w-[90px] min-w-[65px] md:h-[90px] h-[65px] flex items-center justify-center mb-[20px]">
                 {value.icon}
               </div>
               <h3 className="md:text-[24px] text-[18px] font-[400] mb-[8px]">

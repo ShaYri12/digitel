@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import HeroSection from "./HeroSection";
 import LogoSlider from "../components/LogoSlider";
 import MissionVision from "./MissionVision";
+import ExecutiveTeam from "./ExecutiveTeam";
 import Values from "./Values";
 
 const About = () => {
@@ -26,6 +27,7 @@ const About = () => {
       <HeroSection />
       <LogoSlider />
       <MissionVision />
+      <ExecutiveTeam />
       <Values />
     </main>
   );

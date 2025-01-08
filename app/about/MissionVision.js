@@ -21,8 +21,8 @@ const DataWithImage = ({
       </div>
 
       {/* Image */}
-      <div className="flex-1 md:w-full sm:w-[60%] w-full">
-        <div className="rounded-3xl overflow-hidden w-full h-[393px]">
+      <div className="flex-1 md:w-full sm:w-[50%] w-full">
+        <div className="rounded-3xl overflow-hidden w-full md:h-[393px] h-[300px]">
           <img
             src={imgSrc}
             alt="Visual representation"
