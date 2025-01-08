@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import HeroSection from "./HeroSection";
 import LogoSlider from "../components/LogoSlider";
+import MissionVision from "./MissionVision";
 
 const About = () => {
   const pathname = usePathname();
@@ -20,11 +21,10 @@ const About = () => {
     }
   }, [pathname]);
   return (
-    <main className="relative min-h-screen md:py-12 py-8 md:px-6 px-4">
-      <div className="max-w-[1280px] mx-auto text-white">
-        <HeroSection />
-        <LogoSlider />
-      </div>
+    <main className="relative min-h-screen">
+      <HeroSection />
+      <LogoSlider />
+      <MissionVision />
     </main>
   );
 };

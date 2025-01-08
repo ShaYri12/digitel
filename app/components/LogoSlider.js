@@ -35,10 +35,22 @@ export default function LogoSlider() {
       width: 220,
       height: 57,
     },
+    {
+      src: "/assets/combinator.png",
+      alt: "Company Logo 2",
+      width: 227,
+      height: 66,
+    },
+    {
+      src: "/assets/sears.png",
+      alt: "Company Logo 3",
+      width: 158,
+      height: 42,
+    },
   ];
 
   return (
-    <section className="py-[100px]">
+    <section className="md:py-[100px] py-[80px]">
       <Marquee
         gradient={false}
         speed={50}
