@@ -40,7 +40,7 @@ export default function ExecutiveTeam() {
   ];
 
   return (
-    <section className="bg-[#141414] w-full text-white md:py-12 py-8 md:px-6 px-4">
+    <section className="bg-[#141414] w-full text-white lg:py-[80px] md:py-12 py-8 md:px-6 px-4">
       <div className="max-w-[1280px] mx-auto text-white">
         <h2 className="md:text-[62px] text-[40px] font-[400] text-center mb-[18px]">
           The Executive Team
