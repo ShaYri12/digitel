@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { GoPlus } from "react-icons/go";
+import { FiMinus } from "react-icons/fi";
 
 export default function OurPledge() {
   const [openItem, setOpenItem] = useState(null);
@@ -84,24 +85,28 @@ export default function OurPledge() {
           <div key={index} className="border-t-[2px] border-[#3030305C]">
             <button
               onClick={() => toggleItem(index)}
-              className="flex items-center justify-between w-full text-left md:text-[24px] text-[19px] font-light py-4 focus:outline-none group"
+              className="flex items-center justify-between w-full text-left py-4 focus:outline-none group"
             >
-              <span className="group-hover:text-gray-200 transition-colors">
+              <span className="md:text-[24px] text-[19px] font-[400]">
                 {item.title}
               </span>
-              <span
-                className={`text-white transition-transform duration-200 ${
-                  openItem === index ? "rotate-45" : ""
-                }`}
-              >
-                <GoPlus size={24} />
+              <span className="text-white transition-transform duration-200">
+                {openItem === index ? (
+                  <FiMinus size={24} />
+                ) : (
+                  <GoPlus size={24} />
+                )}
               </span>
             </button>
-            {openItem === index && (
-              <div className="text-white md:text-[18px] font-[300] pb-4">
-                {item.content}
-              </div>
-            )}
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-in-out pe-[27px] ${
+                openItem === index
+                  ? "max-h-[500px] opacity-100 pb-4"
+                  : "max-h-0 opacity-0"
+              }`}
+            >
+              {item.content}
+            </div>
           </div>
         ))}
       </div>

@@ -3,10 +3,12 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { IoClose } from "react-icons/io5"; // Import the close icon
 import { RiMenu2Fill } from "react-icons/ri";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname(); // Get the current path
 
   // Handle scrolling for background change
   useEffect(() => {
@@ -42,6 +44,11 @@ export default function Navbar() {
     };
   }, [isOpen]);
 
+  const getLinkClass = (href) =>
+    `text-white md:text-[18px] font-[300] border-b ${
+      pathname === href ? "border-white" : "border-transparent"
+    } hover:border-white transition-colors`;
+
   return (
     <>
       <div className="flex h-[63px] w-1"></div>
@@ -67,34 +74,19 @@ export default function Navbar() {
                 "linear-gradient(166.27deg, rgba(38, 38, 38, 0.2) 69.2%, #363636 102.23%)",
             }}
           >
-            <Link
-              href="/"
-              className="text-white md:text-[18px] font-[300] hover:border-white border-b border-transparent transition-colors"
-            >
+            <Link href="/" className={getLinkClass("/")}>
               Home
             </Link>
-            <Link
-              href="/company"
-              className="text-white md:text-[18px] font-[300] hover:border-white border-b border-transparent transition-colors"
-            >
+            <Link href="/company" className={getLinkClass("/company")}>
               Company
             </Link>
-            <Link
-              href="/technology"
-              className="text-white md:text-[18px] font-[300] hover:border-white border-b border-transparent transition-colors"
-            >
+            <Link href="/technology" className={getLinkClass("/technology")}>
               Technology
             </Link>
-            <Link
-              href="/solutions"
-              className="text-white md:text-[18px] font-[300] hover:border-white border-b border-transparent transition-colors"
-            >
+            <Link href="/solutions" className={getLinkClass("/solutions")}>
               Solutions
             </Link>
-            <Link
-              href="/pricing"
-              className="text-white md:text-[18px] font-[300] hover:border-white border-b border-transparent transition-colors"
-            >
+            <Link href="/pricing" className={getLinkClass("/pricing")}>
               Pricing
             </Link>
           </div>
@@ -138,35 +130,35 @@ export default function Navbar() {
 
             <Link
               href="/"
-              className="text-white hover:border-white border-b border-transparent w-fit"
+              className={`${getLinkClass("/")} w-fit`}
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
               href="/company"
-              className="text-white hover:border-white border-b border-transparent w-fit"
+              className={`${getLinkClass("/company")} w-fit`}
               onClick={() => setIsOpen(false)}
             >
               Company
             </Link>
             <Link
               href="/technology"
-              className="text-white hover:border-white border-b border-transparent w-fit"
+              className={`${getLinkClass("/technology")} w-fit`}
               onClick={() => setIsOpen(false)}
             >
               Technology
             </Link>
             <Link
               href="/solutions"
-              className="text-white hover:border-white border-b border-transparent w-fit"
+              className={`${getLinkClass("/solutions")} w-fit`}
               onClick={() => setIsOpen(false)}
             >
               Solutions
             </Link>
             <Link
               href="/pricing"
-              className="text-white hover:border-white border-b border-transparent w-fit"
+              className={`${getLinkClass("/pricing")} w-fit`}
               onClick={() => setIsOpen(false)}
             >
               Pricing
