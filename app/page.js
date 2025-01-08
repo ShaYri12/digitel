@@ -2,7 +2,8 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import LogoSlider from "./components/LogoSlider";
-import FAQ from "./components/FAQ";
+import FAQ from "./components/home/FAQ";
+import Hero from "./components/home/Hero";
 
 export default function Home() {
   const pathname = usePathname();
@@ -21,8 +22,8 @@ export default function Home() {
   }, [pathname]);
 
   return (
-    <div className="py-[100px] min-h-screen">
-      <div>Hero section</div>
+    <div className="min-h-screen">
+      <Hero />
       <LogoSlider />
       <div>IIElevenLabs</div>
       <FAQ />
