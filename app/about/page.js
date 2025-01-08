@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import HeroSection from "./HeroSection";
 import LogoSlider from "../components/LogoSlider";
 import MissionVision from "./MissionVision";
+import Values from "./Values";
 
 const About = () => {
   const pathname = usePathname();
@@ -25,6 +26,7 @@ const About = () => {
       <HeroSection />
       <LogoSlider />
       <MissionVision />
+      <Values />
     </main>
   );
 };

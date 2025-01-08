@@ -66,7 +66,7 @@ export default function OurPledge() {
         every aspect of our operation
       </p>
 
-      <h2 className="md:text-[24] text-[18px] font-[400] mb-[21px]">
+      <h2 className="md:text-[24px] text-[18px] font-[400] mb-[21px]">
         Promoting Transparency in AI Interactions
       </h2>
 
