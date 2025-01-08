@@ -34,7 +34,7 @@ const SupportRequest = () => {
   return (
     <section className="min-h-screen md:py-12 py-8 px-4">
       <div className="xl:max-w-[1024px] max-w-[800px] mx-auto">
-        <h1 className="text-white xl:text-[92px] lg:text-[80px] lg:text-[70px] md:text-[60px] sm:text-[50px] text-[40px] font-[400] md:mb-[35px] mb-[26px] text-center">
+        <h1 className="text-white xl:text-[92px] lg:text-[70px] md:text-[60px] sm:text-[50px] text-[40px] font-[400] md:mb-[35px] mb-[26px] text-center">
           Support Request
         </h1>
 
@@ -62,7 +62,7 @@ const SupportRequest = () => {
                   <input
                     type="text"
                     id="firstName"
-                    className="w-full bg-[#242424] text-white placeholder:text-[#FFFFFF5C] placeholder:font-[300] font-[400] rounded-full md:px-7 px-5 md:py-4 py-3 focus:outline-none focus:ring-1 focus:ring-purple"
+                    className="w-full bg-[#242424] text-white placeholder:text-[#FFFFFF5C] placeholder:font-[300] font-[400] rounded-full md:px-7 px-5 md:py-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple"
                     placeholder="Your name"
                     value={formData.firstName}
                     onChange={(e) =>
@@ -90,7 +90,7 @@ const SupportRequest = () => {
                   <input
                     type="text"
                     id="lastName"
-                    className="w-full bg-[#242424] text-white placeholder:text-[#FFFFFF5C] placeholder:font-[300] font-[400] rounded-full md:px-7 px-5 md:py-4 py-3 focus:outline-none focus:ring-1 focus:ring-purple"
+                    className="w-full bg-[#242424] text-white placeholder:text-[#FFFFFF5C] placeholder:font-[300] font-[400] rounded-full md:px-7 px-5 md:py-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple"
                     placeholder="Your name"
                     value={formData.lastName}
                     onChange={(e) =>
@@ -123,7 +123,7 @@ const SupportRequest = () => {
                   className={`w-full bg-[#242424] cursor-pointer text-white ${
                     formData.browser === "" &&
                     "text-[#FFFFFF5C] font-[200] text-opacity-[0.5]"
-                  } rounded-full md:px-7 px-5 md:py-4 py-3 font-[400] appearance-none focus:outline-none focus:ring-1 focus:ring-purple`}
+                  } rounded-full md:px-7 px-5 md:py-4 py-3 font-[400] appearance-none focus:outline-none focus:ring-2 focus:ring-purple`}
                   value={formData.browser}
                   onChange={(e) =>
                     setFormData({ ...formData, browser: e.target.value })
@@ -161,7 +161,7 @@ const SupportRequest = () => {
                   className={`w-full bg-[#242424] cursor-pointer ${
                     formData.country === "" &&
                     "text-[#FFFFFF5C] font-[200] text-opacity-[0.5]"
-                  } text-white rounded-full md:px-7 px-5 md:py-4 py-3 font-[400] appearance-none focus:outline-none focus:ring-1 focus:ring-purple`}
+                  } text-white rounded-full md:px-7 px-5 md:py-4 py-3 font-[400] appearance-none focus:outline-none focus:ring-2 focus:ring-purple`}
                   value={formData.country}
                   onChange={(e) =>
                     setFormData({ ...formData, country: e.target.value })
